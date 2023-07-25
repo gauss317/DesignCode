@@ -1,4 +1,4 @@
-package design.工厂策略模式;
+package com.go.gauss.strategy;
 
 import com.google.common.collect.Maps;
 import org.springframework.beans.BeansException;

@@ -2,7 +2,7 @@
  * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
  */
 
-package design.工厂策略模式;
+package com.go.gauss.strategy;
 
 /**
  * 策略
