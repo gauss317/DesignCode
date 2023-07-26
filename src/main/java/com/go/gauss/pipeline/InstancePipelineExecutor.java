@@ -45,21 +45,19 @@ public class InstancePipelineExecutor {
      * @return 处理过程中管道是否畅通，畅通返回 true，不畅通返回 false
      */
     public boolean acceptSync(PipelineContext context) {
-        // 拿到数据类型
-        Class<? extends PipelineContext> dataType = context.getClass();
         // 获取数据处理管道
-        List<? extends ContextHandler<? super PipelineContext>> pipeline = pipelineRouteMap.get(dataType);
+        List<? extends ContextHandler<? super PipelineContext>> pipeline = pipelineRouteMap.get(context.getClass());
+
+        // 没有异常的写法
+        pipeline.forEach(contextHandler -> contextHandler.handle(context));
 
         if (CollectionUtils.isEmpty(pipeline)) {
-            logger.error("{} 的管道为空", dataType.getSimpleName());
+            logger.error("管道为空");
             return false;
         }
 
         // 管道是否畅通
         boolean lastSuccess = false;
-
-        // 没有异常的写法
-        pipeline.forEach(contextHandler -> contextHandler.handle(context));
 
         for (ContextHandler<? super PipelineContext> handler : pipeline) {
             try {
