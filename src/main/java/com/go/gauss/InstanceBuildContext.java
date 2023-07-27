@@ -1,6 +1,6 @@
-package com.go.gauss.pipeline.context;
+package com.go.gauss;
 
-import com.go.gauss.pipeline.context.PipelineContext;
+import com.go.gauss.pipeline.PipelineContext;
 
 import lombok.Getter;
 import lombok.Setter;

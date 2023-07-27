@@ -1,6 +1,4 @@
-package com.go.gauss.pipeline.handler;
-
-import com.go.gauss.pipeline.context.PipelineContext;
+package com.go.gauss.pipeline;
 
 /**
  * 管道中的上下文处理器
@@ -13,11 +11,9 @@ import com.go.gauss.pipeline.context.PipelineContext;
  * （11、21、31）这种，那么可以避免上面方案中要修改代码的问题，但是仍然无法避免要进入每个相关的
  *  ContextHandler 中去查看才能知道管道处理链路的问题。
  *
- * 3、提前写好一份路由表，指定好 ”Context -> 管道“ 的映射（管道用 List<ContextHandler> 来表示），
- * 以及管道中处理器的顺序 。Spring 来根据这份路由表，在启动时就构建好一个 Map，Map 的键为 Context 的类型
- * ，值为 管道（即 List<ContextHandler>）。这样的话，如果想知道每个管道的处理链路，直接看这份路由表就行，一目了然。
- * 缺点嘛，就是每次加入新的 ContextHandler 时，这份路由表也需要在对应管道上进行小改动 —— 但是如果能让阅读代码更清晰，
- * 我觉得这样的修改是值得的、可接受的~
+ * 3、提前写好一份路由表，指定好 ”Context -> 管道“ 的映射（管道用 List<ContextHandler> 来表示），以及管道中处理器的顺序 。
+ * Spring 来根据这份路由表，在启动时就构建好一个 Map，Map 的键为 Context 的类型值为 管道（即 List<ContextHandler>）。
+ * 这样的话，如果想知道每个管道的处理链路，直接看这份路由表就行，一目了然。
  */
 public interface ContextHandler<T extends PipelineContext> {
 

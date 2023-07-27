@@ -1,7 +1,7 @@
-package com.go.gauss.pipeline;
+package com.go.gauss;
 
-import com.go.gauss.pipeline.context.PipelineContext;
-import com.go.gauss.pipeline.handler.ContextHandler;
+import com.go.gauss.pipeline.PipelineContext;
+import com.go.gauss.pipeline.ContextHandler;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;

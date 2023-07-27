@@ -1,9 +1,9 @@
-package com.go.gauss.pipeline.configuration;
+package com.go.gauss.configuration;
 
-import com.go.gauss.pipeline.handler.ContextHandler;
-import com.go.gauss.pipeline.context.PipelineContext;
+import com.go.gauss.pipeline.ContextHandler;
+import com.go.gauss.pipeline.PipelineContext;
 import com.go.gauss.pipeline.handler.InputDataPreChecker;
-import com.go.gauss.pipeline.context.InstanceBuildContext;
+import com.go.gauss.InstanceBuildContext;
 import com.go.gauss.pipeline.handler.ModelInstanceCreator;
 import com.go.gauss.pipeline.handler.ModelInstanceSaver;
 

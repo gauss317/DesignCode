@@ -1,6 +1,7 @@
 package com.go.gauss.pipeline.handler;
 
-import com.go.gauss.pipeline.context.InstanceBuildContext;
+import com.go.gauss.InstanceBuildContext;
+import com.go.gauss.pipeline.ContextHandler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

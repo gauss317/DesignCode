@@ -1,6 +1,7 @@
 package com.go.gauss.pipeline.handler;
 
-import com.go.gauss.pipeline.context.InstanceBuildContext;
+import com.go.gauss.InstanceBuildContext;
+import com.go.gauss.pipeline.ContextHandler;
 
 import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
