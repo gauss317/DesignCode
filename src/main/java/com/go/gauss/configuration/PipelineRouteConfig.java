@@ -2,10 +2,10 @@ package com.go.gauss.configuration;
 
 import com.go.gauss.pipeline.ContextHandler;
 import com.go.gauss.pipeline.PipelineContext;
-import com.go.gauss.pipeline.handler.InputDataPreChecker;
-import com.go.gauss.InstanceBuildContext;
-import com.go.gauss.pipeline.handler.ModelInstanceCreator;
-import com.go.gauss.pipeline.handler.ModelInstanceSaver;
+import com.go.gauss.service.pipeline.handler.InputDataPreChecker;
+import com.go.gauss.service.pipeline.InstanceBuildContext;
+import com.go.gauss.service.pipeline.handler.ModelInstanceCreator;
+import com.go.gauss.service.pipeline.handler.ModelInstanceSaver;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

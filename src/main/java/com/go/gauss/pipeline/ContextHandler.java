@@ -1,7 +1,7 @@
 package com.go.gauss.pipeline;
 
 /**
- * 管道中的上下文处理器
+ * 管道中的上下文处理器， 后续handler需要实现此接口
  * 1、给 ContextHandler 加一个 setNext 方法，每个实现类必须指定其下一个处理器。缺点也很明显，
  * 如果在当前管道中间加入一个新的 ContextHandler，那么要势必要修改前一个ContextHandler 的 setNext 方法；
  * 另外，代码是写给人阅读的，这样做没法一眼就直观的知道整个管道的处理链路，还要进入到每个相关的 ContextHandler 中去查看才知道。

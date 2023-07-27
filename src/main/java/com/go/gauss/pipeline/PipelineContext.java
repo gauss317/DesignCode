@@ -1,13 +1,9 @@
 package com.go.gauss.pipeline;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * 传递到管道的上下文
+ * 后定义的context上下文需要继承此父类
  */
-@Getter
-@Setter
 public class PipelineContext {
     /**
      * 获取数据名称

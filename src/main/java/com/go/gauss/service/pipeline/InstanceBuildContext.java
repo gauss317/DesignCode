@@ -1,4 +1,4 @@
-package com.go.gauss;
+package com.go.gauss.service.pipeline;
 
 import com.go.gauss.pipeline.PipelineContext;
 
