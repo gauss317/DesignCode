@@ -29,7 +29,7 @@ public class PipelineRouteConfig implements ApplicationContextAware {
      * 数据类型->管道中处理器类型列表 的路由
      */
     private static final Map<Class<? extends PipelineContext>, List<Class<? extends ContextHandler<? extends PipelineContext>>>>
-        PIPELINE_ROUTE_MAP = new HashMap<>(4);
+        PIPELINE_ROUTE_MAP = new HashMap<>(); // .如果不超过12个键值对，初始大小， 太大需要resize，会影响性能
 
     /*
      * 在这里配置各种上下文类型对应的处理管道：键为上下文类型，值为处理器类型的列表
@@ -43,7 +43,7 @@ public class PipelineRouteConfig implements ApplicationContextAware {
     }
 
     /**
-     * 在 Spring 启动时，根据路由表生成对应的管道映射关系
+     * 在Spring启动时，根据路由表生成对应的管道映射关系
      * 将map的class转化为对象的handle bean
      */
     @Bean("pipelineRouteMap")
@@ -56,6 +56,7 @@ public class PipelineRouteConfig implements ApplicationContextAware {
      */
     private List<? extends ContextHandler<? extends PipelineContext>> toPipeline(
         Map.Entry<Class<? extends PipelineContext>, List<Class<? extends ContextHandler<? extends PipelineContext>>>> entry) {
+        // 将class map转化为handler bean类型
         return entry.getValue().stream().map(appContext::getBean).collect(Collectors.toList());
     }
 
