@@ -1,4 +1,4 @@
-package com.go.gauss.service.pipeline.handler;
+package com.go.gauss.pipeline.handler;
 
 import com.go.gauss.service.pipeline.InstanceBuildContext;
 import com.go.gauss.pipeline.ContextHandler;

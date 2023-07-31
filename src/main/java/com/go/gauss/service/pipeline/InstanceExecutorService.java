@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * 管道执行器
  */
 @Component
-public class InstancePipelineExecutor {
+public class InstanceExecutorService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
