@@ -8,3 +8,5 @@
 gauss317/gauss317 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+
+![image-20230802163309909](C:\Users\l00380069\AppData\Roaming\Typora\typora-user-images\image-20230802163309909.png)

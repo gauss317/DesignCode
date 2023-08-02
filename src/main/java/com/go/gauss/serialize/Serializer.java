@@ -1,0 +1,19 @@
+package com.go.gauss.serialize;
+
+/**
+ * 功能描述
+ *
+ * @since 2023-08-01
+ */
+//序列化接口
+public interface Serializer {
+
+    // 序列化算法
+    byte getSerializerAlgorithm();
+
+    // java 对象转换成二进制
+    byte[] serialize(Object object);
+
+    // 二进制转换成 java 对象
+    <T> T deserialize(Class<T> clazz, byte[] bytes);
+}
