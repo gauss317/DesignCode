@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 public class OptionalTest {
     public static void main(String[] args) {
-        String testStr = null;
+        String testStr = "testStr";
         // 使用Optional.ofNullable代替null的判断
         System.out.println(Optional.ofNullable(testStr).orElse("orElse"));
 

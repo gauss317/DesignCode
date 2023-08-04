@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
  * @since 2023-08-02
  */
 @Component
-public class StringLifecycle implements InitializingBean, ApplicationContextAware {
+public class StringLifecycleDemo implements InitializingBean, ApplicationContextAware {
     private final String code = "code";
 
     /**
@@ -23,7 +23,7 @@ public class StringLifecycle implements InitializingBean, ApplicationContextAwar
      * postConstruct has runned:false
      * afterPropertiesSet has runned:false
      */
-    public StringLifecycle() {
+    public StringLifecycleDemo() {
         System.out.println("constructor has runned:" + code);
     }
 
